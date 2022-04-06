@@ -20,7 +20,6 @@ FANUC Roboguide is a proprietary robotic arm simulation and offline programming 
 \item FANUC Roboguide PalletPRO and PalletTool -- simulating palletizing applications.
 
 \end{itemize}
-
 An example of a FANUC Roboguide station is shown in Figure \ref{fig:roboguide}. The version of FANUC Roboguide used in this study is 8.30104.00.35 (Rev. K) \cite{roboguide}. 
 
 \begin{figure}[h]
@@ -122,7 +121,6 @@ The applications of robot machining in industry are numerous. Some applications 
     \item deburring.
 
 \end{itemize}
-
 RoboDK supports three types of robot machining projects:
 
 \begin{itemize}
@@ -132,7 +130,6 @@ RoboDK supports three types of robot machining projects:
     \item point follow projects -- robotic arm follows a path defined by points in 3D space.
 
 \end{itemize}
-
 The process of setting up a curve follow project in RoboDK is described in the following sections. In laser shock peening, the laser (representing the tool) is static, and the robot holds the object. Therefore, a curve follow project with a constant tool orientation is set up in RoboDK \cite{machiningproject}.
 
 \subsection{Setting up a curve follow project in RoboDK}
@@ -193,7 +190,6 @@ An application interface (API) is a set of features an application provides to t
  \item online programming -- using RoboDK API to move robots and retrieve their current position in real time. RoboDK connects to the robotic arm controller using robot drivers.
 
 \end{itemize}
-
 The elegance of this approach is that the same program written in a high--level programming language can be used for all three of the above--mentioned tasks \cite{robodkapi}. 
 
 \subsection{Python API for RoboDK}
@@ -330,7 +326,6 @@ All subsequent functions are called upon the \inline{RobotPost} object. The most
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 MoveL(pose, joints, conf_RLF=None)
 \end{lstlisting}
-
 The \inline{MoveL} method generates manufacturer-specific code for linear movement. 
 The parameters of the \inline{MoveL} method are:
 
@@ -352,11 +347,7 @@ The parameters of the \inline{MoveL} method are:
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 ProgStart(progname)
 \end{lstlisting}
-
-The \inline{ProgStart} method is called when a new program is generated.
-
-
-The parameters of the \inline{ProgStart} method are:
+The \inline{ProgStart} method is called when a new program is generated. The parameters of the \inline{ProgStart} method are:
 
 \begin{itemize}
 
@@ -369,11 +360,7 @@ The parameters of the \inline{ProgStart} method are:
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 setSpeed(speed_mms)
 \end{lstlisting}
-
-The \inline{setSpeed} method sets the linear robotic arm speed (in \SI{}{\mm\per\second}).
-
-
-The parameters of the  \inline{setSpeed} method are:
+The \inline{setSpeed} method sets the linear robotic arm speed (in \SI{}{\mm\per\second}).The parameters of the  \inline{setSpeed} method are:
 
 \begin{itemize}
 
@@ -386,10 +373,7 @@ The parameters of the  \inline{setSpeed} method are:
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 ProgSave(folder, progname, ask_user=False, show_result=False)
 \end{lstlisting}
-
-The \inline{ProgSave} method saves the program in a format compatible with the corresponding robot controller type. 
-
-The parameters of the \inline{ProgSave} method are:
+The \inline{ProgSave} method saves the program in a format compatible with the corresponding robot controller type. The parameters of the \inline{ProgSave} method are:
 
 \begin{itemize}
 
@@ -409,20 +393,13 @@ The parameters of the \inline{ProgSave} method are:
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 ProgFinish(progname)
 \end{lstlisting}
-The \inline{ProgFinish} method is triggered after all the instructions of the program and defines the end of the program.
-
-
-The parameters of the \inline{ProgFinish} method are:
+The \inline{ProgFinish} method is triggered after all the instructions of the program and defines the end of the program. The parameters of the \inline{ProgFinish} method are:
 
 \begin{itemize}
 
 \item \inline{progname (str)} -- program name.
 
 \end{itemize}
-
-%%%%%%%%%%%%%%%%%%
-%%% end of all methods
-
  Every post processor should implement a set of basic methods to generate programs for robotic arm controllers correctly \cite{postmethods}.
 
 
@@ -439,7 +416,7 @@ Each robotic arm has a post processor assigned to it by default. The following s
 
 \subsection{Post processor example and post processor example output}
 
-An example of an output of the unmodified R--30iA post processor is shown in Listing \ref{code:unmodified_post}.
+An example of an output of the unmodified R--30iA post processor output is shown in Listing \ref{code:unmodified_post}.
 
 
 \begin{lstlisting}[numbers=none,caption={Code snippet of unmodified R--30iA post processor output},captionpos=b,label={code:unmodified_post}, language={}]
@@ -575,7 +552,6 @@ where:
     \item \inline{CNT100} -- zone data.
 
 \end{itemize}
-
 The modified \inline{MoveL} method should output the following robotic arm controller code to meet the requirements of the post processor:
 
 
@@ -601,8 +577,7 @@ where:
     \item \inline{WAIT  1.00(sec)} -- block code execution for a certain amount of time.
 
 \end{itemize}
-
- Listing \ref{code:originalMoveL} contains the original \inline{MoveL} method of the FANUC R--30iA post processor and Listing \ref{code:modifiedMoveL} contains the modified \inline{MoveL} method \cite{postmethods}. 
+Listing \ref{code:originalMoveL} contains the original \inline{MoveL} method of the FANUC R--30iA post processor and Listing \ref{code:modifiedMoveL} contains the modified \inline{MoveL} method \cite{postmethods}. 
 
 
 \begin{lstlisting}[numbers=none,caption={Code snippet of original MoveL method},captionpos=b,label={code:originalMoveL}, language={}]
