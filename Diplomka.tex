@@ -49,6 +49,8 @@
 %% \usepackage{subcaption}
 
 
+%% Proofreading appendices not showing
+\usepackage[toc,page]{appendix}
 
 % for printing of units
 \usepackage{siunitx}
@@ -210,6 +212,7 @@ $ $
 
 %% hystyle{\cestaStyles COP}
 %\bibliography{\cestaStyles Refer,\cestaStyles Refer_BP}%references from BIBTEX
+
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
 % Biblatex package for references
@@ -226,36 +229,42 @@ $ $
 
 %-----<<< APPENDIXS >>>-----
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Appendices}
+%\addcontentsline{toc}{chapter}{Appendices}
 \def\appendixname{Appendix}
 \pagenumbering{Roman}                   %start arabic pagination from 1
-\begin{appendix}
+
+% ALTERNATIVE
+%\appendix
+\begin{appendices}
+
+
+%-----<<< --------- >>>-----
+%\begin{appendix}
+%-----<<< --------- >>>-----
+
 %% \addcontentsline{toc}{chapter}{Appendix A}
+%\input{\cestaAP AppendAnother.tex}           %input file
 %\input{\cestaAP AppendCD.tex}           %input file
-\input{\cestaAP AppendAnother.tex} 
+\input{\cestaAP AppendRoubal.tex}           %input file
 \input{\cestaAP AppendSW.tex}           %input file
 \input{\cestaAP AppendPlan.tex}         %input file
 %% \input{\cestaAP AppendTime.tex}         %input file
 %% \input{\cestaAP AppendBudget.tex}       %input file
-
+%\input{\cestaAP AppendCD.tex}           %input file
 %% TYTO TRI ODKOMENTOVAT, AZ S TIM BUDU DALE PRACOVAT
 
 %\input{Styles/Manual_tex.tex}           %input file
 %\input{Styles/Manual_typo.tex}          %input file
 %\input{Styles/Manual_final.tex}         %input file
-\end{appendix}
+
+%-----<<< --------- >>>-----
+%\end{appendix}
 %-----<<< --------- >>>-----
 
+% ALTERNATIVE
+\end{appendices}
 
 
-%-----<<< INDEX >>>-----
-% NECHCI RESTRIK
-\iffalse
-\cleardoublepage \addcontentsline{toc}{chapter}{Rejstřík}
-\printindex
-
-\textcolor{blue}{\em Tento text se nachází v~souboru\/ {\rm\texttt{Diplomka.tex} na řádcích 179-185}. Pro odstranění rejstříku, odkomentujte v~souboru {\rm \texttt{Diplomka.tex}} řádky 179\?: $\backslash$\texttt{iffalse} a~185\?: $\backslash$\texttt{fi}.\\[2ex] Pokud chcete vkládat klíčová slova do rejstříku, používejte příkaz $\backslash$\texttt{index\{\}}.}
-\fi
 %-----<<< ----- >>>-----
 
 \end{document}
