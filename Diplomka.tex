@@ -77,8 +77,8 @@
 
 
 
-
-\def \APforPrint {1}
+% 0 - netiskne se, 1 - tiskne se 
+\def \APforPrint {0}
 
 \def \BookName {ABSOLVENTSKÁ PRÁCE}
 \def \HEAD {Vyšší odborná škola, Střední škola, Centrum odborné přípravy\\ Sezimovo Ústí}
@@ -108,7 +108,7 @@
 \begin{document}
 
 %-----<<< BINDING >>>-----
-%\iffalse
+\iffalse
 \pagestyle{empty}                       %no pagination
 \input{\cestaFiles Binding.tex}         %input file
 \cleardoublepage
@@ -122,7 +122,7 @@
 
 \end{verbatim}
 \cleardoublepage
-%\fi
+\fi
 %-----<<< --------------------- >>>-----
 
 
