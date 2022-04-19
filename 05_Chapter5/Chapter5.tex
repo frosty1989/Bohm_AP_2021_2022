@@ -71,32 +71,12 @@ A motion instruction is the most important type of program element. A motion ins
 
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.9\linewidth]{img/motion_command.jpg}
     \caption[Example of motion instruction]{Example of motion instruction \protect\cite{fanuchandling}}
     \label{fig:motion}
 \end{figure}
-
-\begin{comment}
-
-
-
-\subsection{FANUC robotic arm controller programming languages}
-
-The FANUC company implements two programming languages for programming their robotic arm controllers: teach pendant (TP) or KAREL. The TP language is mainly used for motion control of the robotic arm and the programs are usually edited via the pendant. TP programs are either binary files (\inline{.tp} file extension) or can be human--readable ASCII files (\inline{.ls} file extension). The syntax of the TP language is described in great detail in the \emph{SYSTEM R-30iB and R-30iB MATE HandlingTool Setup and Operations Manual}~\cite{fanuchandling}. The KAREL language is a~high--level language and does not support robotic arm movement instructions. KAREL is mainly used to implement program logic. KAREL programs can not be edited using a~Teach pendant. The syntax of the KAREL language is covered in the \emph{FANUC Robotics SYSTEM R-30iA Controller KAREL Reference Manual}~\cite{karelmanual}.
-
-\subsection{Compiling a~FANUC TP program}
-
-Only a~TP program in binary format can be run on FANUC robotic arm controllers. Because RoboDK creates TP programs as human--readable ASCII files, the TP programs need to be converted to binary format before uploading them to the robotic arm controller. Two options to convert \inline{.ls} programs to \inline{.tp} programs exist:
-
-\begin{enumerate}
-\item the ASCII Upload option must be loaded on the robotic arm controller. After uploading an \inline{.ls} file to the controller, it is automatically converted to a~\inline{.tp} file,
-\item the program is compiled and uploaded either using the WinOLPC  tools via Roboguide or using the WinOLPC tools directly~\cite{fanuchandling}. The WinOLPC tools are located in \inline{C:/Program File(x86)/FANUC/WinOLPC/bin} in the Windows operating system.
-
-\end{enumerate}
-
-\end{comment}
 
 
 \subsection{Compiling a~FANUC teach pendant program}
