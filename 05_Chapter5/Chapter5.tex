@@ -10,7 +10,7 @@ This chapter familiarises the reader with the creation of a~curve follow project
 
 \subsection{FANUC Roboguide}
 
-FANUC Roboguide is a~proprietary robotic arm simulation and offline programming tool developed by the FANUC corporation. FANUC Roboguide is in many ways similar to RoboDK.  Like RoboDK, it supports the creation of robotic arm stations, importing of CAD files and CAD-to-path features. The main difference is that Roboguide is limited to FANUC robotic arms and FANUC related technologies and procedures. In contrast, RoboDK is not limited to one robotic arm manufacturer and is universal and expandable. FANUC Roboguide is used in this study to compile the created robotic arm controller programs and upload them to the robotic arm controller. FANUC Roboguide offers several simulation software options tailored for specific robotic arm applications:
+FANUC Roboguide is a~proprietary robotic arm simulation and offline programming tool developed by the FANUC corporation. FANUC Roboguide is in many ways similar to RoboDK.  Like RoboDK, it supports the creation of robotic arm stations, importing of CAD files and CAD-to-path features. The main difference is that Roboguide is limited to FANUC robotic arms and FANUC related technologies and procedures. In contrast, RoboDK is not limited to one robotic arm manufacturer and is universal and expandable. FANUC Roboguide is used in this thesis to compile the created robotic arm controller programs and upload them to the robotic arm controller. FANUC Roboguide offers several simulation software options tailored for specific robotic arm applications:
 
 \begin{itemize}
 
@@ -58,16 +58,16 @@ A program element is a~segment of a~program. A TP program is a~collection of pro
     \label{fig:tp}
 \end{figure}
 
-A motion instruction is the most important type of program element. A motion instruction directs the robot to move in a~specified way to a~specific location in the workcell using a~specified speed. Figure~\ref{fig:motion} shows a~typical example of a~motion instruction. A motion instruction consists of:
+A motion instruction is the most important type of program element. A motion instruction directs the robotic arm to move in a~specified way to a~specific location in the workcell using a~specified speed. Figure~\ref{fig:motion} shows a~typical example of a~motion instruction. A motion instruction consists of:
 
 \begin{itemize}
 
-\item motion type -- how the robot moves to the position,
-\item position indicator symbol -- indicates that the robot is at the taught position,
-\item positional information -- where the robot moves,
-\item termination type -- how the robot ends the move to the position,
-\item speed -- how fast the robot moves to a~position,
-\item motion options -- additional commands that perform specific tasks during robot motion.
+\item motion type -- how the robotic arm moves to the position,
+\item position indicator symbol -- indicates that the robotic arm is at the taught position,
+\item positional information -- where the robotic arm moves,
+\item termination type -- how the robotic arm ends the move to the position,
+\item speed -- how fast the robotic arm moves to a~position,
+\item motion options -- additional commands that perform specific tasks during robotic arm motion.
 
 \end{itemize}
 
@@ -111,7 +111,7 @@ Only a~TP program in binary format can be run on FANUC robotic arm controllers. 
 
 \section{Robot machining projects in RoboDK}
 
-The applications of robot machining in industry are numerous. Some applications include:
+The applications of robotic arm machining in industry are numerous. Some applications include:
 
 \begin{itemize}
 
@@ -126,23 +126,23 @@ RoboDK supports three types of robot machining projects:
 \begin{itemize}
 
     \item robot machining projects -- a~robotic arm path is created from an Numerical Control (NC) file,
-    \item curve follow projects -- robotic arm follows a~curve path in 3D space, 
-    \item point follow projects -- robotic arm follows a~path defined by points in 3D space.
+    \item curve follow projects -- a~robotic arm follows a~curve path in 3D space, 
+    \item point follow projects -- a~robotic arm follows a~path defined by points in 3D space.
 
 \end{itemize}
-The process of setting up a~curve follow project in RoboDK is described in the following sections. In laser shock peening, the laser (representing the tool) is static, and the robot holds the object. Therefore, a~curve follow project with a~constant tool orientation is set up in RoboDK~\cite{machiningproject}.
+The process of setting up a~curve follow project in RoboDK is described in the following sections. In laser shock peening, the laser (representing the tool) is static, and the robotic arm holds the object. Therefore, a~curve follow project with a~constant tool orientation is set up in RoboDK~\cite{machiningproject}.
 
 \subsection{Setting up a~curve follow project in RoboDK}
 \label{sec:settingup}
 
-A curve follow project in RoboDK must at least consist of one robot, one tool, and one reference frame. The situation described is a~so-called remote TCP situation, i.e., the Tool Center Point (TCP) is fixed in the station, and the robot holds the object. The TCP in our project is represented by the laser beam. 
-The user has to execute the following steps to set up a~basic curve follow project and to generate a~vendor-specific robot program: 
+A curve follow project in RoboDK must at least consist of one robotic arm, one tool, and one reference frame. The situation described is a~so-called remote TCP situation, i.e., the Tool Center Point (TCP) is fixed in the station, and the robotic arm holds the object. The TCP in our project is represented by the laser beam. 
+The user has to execute the following steps to set up a~basic curve follow project and to generate a~vendor-specific robotic arm program: 
 
 \begin{enumerate}
 
 \item create and import the robotic arm path to RoboDK using preferred CAD software,
 
-\item mount the robot path as a~tool in RoboDK,
+\item mount the robotic arm path as a~tool in RoboDK,
 
 \item create reference frame (optionally import CAD of manufactured part) in RoboDK station, 
 
@@ -162,11 +162,11 @@ The user has to execute the following steps to set up a~basic curve follow proje
     
 \item change \inline{Select algorithm} option to: \inline{Robot holds object & follows path},
 
-\item select \inline{Update project}. RoboDK automatically generates a~preprocessed robot program for the actual station,
+\item select \inline{Update project}. RoboDK automatically generates a~preprocessed robotic arm program for the actual station,
 
 \item right-click the preprocessed program, select post processor and generate program. The \inline{.ls} program for the actual station will be opened in the default RoboDK text editor,
 
-\item compile the program and export the program to the FANUC robot controller using FANUC Roboguide or WinOLPC tools~\cite{curvefollow}.
+\item compile the program and export the program to the FANUC robotic arm controller using FANUC Roboguide or WinOLPC tools~\cite{curvefollow}.
     
 \end{enumerate}
 
@@ -179,7 +179,7 @@ The user has to execute the following steps to set up a~basic curve follow proje
 
 \section{RoboDK API}
 
-An application interface (API) is a~set of features an application provides to the user via a~high-level programming language. The RoboDK API dramatically expands the potential of RoboDK. The RoboDK API is implemented in Python, C\#, C++, Visual Basic (.NET) and Matlab.  The Python API is the most extensive and is used in this study. The RoboDK API facilitates the execution of the following tasks:
+An application interface (API) is a~set of features an application provides to the user via a~high-level programming language. The RoboDK API dramatically expands the potential of RoboDK. The RoboDK API is implemented in Python, C\#, C++, Visual Basic (.NET) and Matlab.  The Python API is the most extensive and is used in this thesis. The RoboDK API facilitates the execution of the following tasks:
 
 \begin{itemize}
     
@@ -187,7 +187,7 @@ An application interface (API) is a~set of features an application provides to t
 
  \item offline programming -- using the RoboDK API methods to create programs for specific robotic arm controllers. The pre-processed \inline{.pyc} file created in RoboDK's GUI is executed directly by the post processor. The post processor defines the rules for vendor--specific robotic arm controller program generation. 
 
- \item online programming -- using RoboDK API to move robots and retrieve their current position in real time. RoboDK connects to the robotic arm controller using robot drivers.
+ \item online programming -- using RoboDK API to move robotic arms and retrieve their current position in real time. RoboDK connects to the robotic arm controller using robotic arm drivers.
 
 \end{itemize}
 The elegance of this approach is that the same program written in a~high-level programming language can be used for all three of the above-mentioned tasks~\cite{robodkapi}. 
@@ -206,7 +206,7 @@ The modules are located in the folder  \inline{C:/RoboDK/Python/} in the Windows
 
 \section{RoboDK post processors}
 
-A post processor specifies how robot programs must be generated for a~specific robot controller and are used when robot programs are generated offline. Post processors serve as tools to convert the simulation to vendor-specific robot programs. All RoboDK post processors are placed in the \inline{C:/RoboDK/Posts} folder in the Windows operating system. All post processors rely on the \inline{robodk} module. The \inline{robodk} module is a~robotics toolbox for Python, based on \href{http://petercorke.com/Robotics_Toolbox.html}{Peter Corke’s Robotics Toolbox}~\cite{robodkapipython}. 
+A post processor specifies how robotic arm programs must be generated for a~specific robot controller and are used when robotic arm programs are generated offline. Post processors serve as tools to convert the simulation to vendor-specific robotic arm programs. All RoboDK post processors are placed in the \inline{C:/RoboDK/Posts} folder in the Windows operating system. All post processors rely on the \inline{robodk} module. The \inline{robodk} module is a~robotics toolbox for Python, based on \href{http://petercorke.com/Robotics_Toolbox.html}{Peter Corke’s Robotics Toolbox}~\cite{robodkapipython}. 
 
 \subsection{RoboDK post processor workflow}
 
@@ -215,13 +215,13 @@ The creation of a~program that is compatible with a~FANUC robotic arm controller
 \begin{enumerate}
   \item create a~program in a~curve follow project in RoboDK,   
   \item generate a~preprocessed/universal \inline{.pyc} file using RoboDK,
-  \item generate a~vendor-specific robot \inline{.ls} program using the post processor.
+  \item generate a~vendor-specific robotic arm \inline{.ls} program using the post processor.
 \end{enumerate}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth]{img/workflow.jpg}
+    \includegraphics[width=0.9\linewidth]{img/workflow_2.jpg}
     \caption{RoboDK post processor workflow}
     \label{workflow}
 \end{figure}
@@ -334,7 +334,7 @@ The parameters of the \inline{MoveL} method are:
 \item \inline{pose (robodk.Mat())} -- pose target of the tool with respect to the reference frame, pose can be \inline{None} if the target is defined as a~joint target,
 
 %% do not highlight anything - then use text
-\item \inline{joints (float list)} -- robot joints as a~list,
+\item \inline{joints (float list)} -- robotic arm joints as a~list,
 
 \item \inline{conf_RLF (int list)} -- pass additional arguments to function. 
 
@@ -373,7 +373,7 @@ The \inline{setSpeed} method sets the linear robotic arm speed (in \SI{}{\mm\per
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true]{python}
 ProgSave(folder, progname, ask_user=False, show_result=False)
 \end{lstlisting}
-The \inline{ProgSave} method saves the program in a~format compatible with the corresponding robot controller type. The parameters of the \inline{ProgSave} method are:
+The \inline{ProgSave} method saves the program in a~format compatible with the corresponding robotic arm controller type. The parameters of the \inline{ProgSave} method are:
 
 \begin{itemize}
 
@@ -552,7 +552,7 @@ where:
     \item \inline{CNT100} -- zone data.
 
 \end{itemize}
-The modified \inline{MoveL} method should output the following robotic arm controller code to meet the requirements of the post processor:
+The modified \inline{MoveL} method should output the following robotic arm controller code to meet the requirements of the laser shock peening process:
 
 
 \begin{lstlisting}[frame=lines,numbers=none,breaklines=true, language={}]
