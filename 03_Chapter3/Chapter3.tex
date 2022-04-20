@@ -50,7 +50,7 @@ The direct ablation mode refers to the interaction of plasma with metal without 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{img/lsp_configuration.jpg}
+    \includegraphics[width=0.4\linewidth]{img/lsp_configuration.jpg}
     \caption[Schematic configuration of laser shock peening process]{Schematic configuration of laser shock peening process \protect\cite{bohm_kaufman_brajer_rostohar_2019}}
     \label{fig:lspconfiguration}
 \end{figure}
@@ -137,24 +137,28 @@ The metal surface is usually laminated with a~nontransparent material such as bl
     \item thermal protective coating -- protecting the material surface from laser ablation and melting (the thermal effect is limited only to the protective coating) and thus preventing tensile strain from developing on the material's surface~\cite{hong_wang_guo_wu_wang_dai_xia_xie_1998}.
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{img/lsp_strategy.jpg}
+    \caption[Laser shock peening strategy -- one layer consisting of four sequences]{Laser shock peening strategy -- one layer consisting of four sequences \protect\cite{bohm_kaufman_brajer_rostohar_2019}}
+    \label{fig:lspstrategy}
+\end{figure}
+
 \subsection{Laser shock peening overlapping strategy}
 
 Overlapping of successive LSP processes (i.e., individual laser impact areas) is used to cover large areas with LSP. The coverage ratio is defined as the ratio between the overlapping area and the impact spot size for two successive LSP processes. An increase in the coverage ratio increases the plastically affected depth. Overlapping successive LSP processes results in a~comparatively uniform distribution of compressive residual stress across the overlapping regions.
 
 During the peening process, a~pattern is created made of individual laser pulses. Generally, multiple sequences of the pattern that are gradually shifted across the sample are used to create a~layer, as seen in Figure~\ref{fig:lspstrategy}. The pattern shifting ensures a~more homogeneous residual stress distribution. The disadvantage of this strategy is that the protective coating needs to be replaced in between sequences~\cite{kaufman}.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\linewidth]{img/lsp_strategy.jpg}
-    \caption[Laser shock peening strategy -- one layer consisting of four sequences]{Laser shock peening strategy -- one layer consisting of four sequences \protect\cite{bohm_kaufman_brajer_rostohar_2019}}
-    \label{fig:lspstrategy}
-\end{figure}
+
 
 
 
 \subsection{Laser system parameters affecting the LSP process}
 
 When performing a~LSP process, the most challenging task is the choice of optimal LSP parameters (laser power density, laser spot size, absorbent coating) for the given material. If these parameters are chosen incorrectly, high tensile residual stresses can be induced on the material's surface, which can worsen the mechanical performance of the component~\cite{clauer_holbrook_fairand_1981}.  
+
+
 
 \subsubsection*{Laser system for laser shock peening overview}
 
@@ -203,7 +207,7 @@ The magnitude of the laser power density plays a~pivotal role in determining the
 
 \begin{itemize}
 
-    \item dielectric breakdown of air can occur if the magnitude of the laser power density is too high. The dielectric breakdown is the generation of plasma not on the material surface, but in the area in front of it. This plasma absorbs the incoming laser pulse energy, thus limiting the energy to generate a~shock wave in the material,
+    \item dielectric breakdown of air can occur if the magnitude of the laser power density is too high. The dielectric breakdown is the generation of plasma not on the material surface, but in the area in front of it. This plasma absorbs the incoming laser pulse energy, thus limiting the energy to generate a~shock wave in the material and affects the LSP process negatively,
 
     \item when the magnitude of laser power density is higher than a~certain threshold, the residual stresses increase in depth but decrease at the surface because of surface release waves,
 
@@ -242,11 +246,10 @@ Nowadays, LSP is heavily commercialised, and hundreds of patents regarding LSP h
  
     \item increase of fatigue life and fatigue strength of structures~\cite{dane_hackel_daly_harrisson_2000},
     \item strengthening of thin sections~\cite{vaccari_1992},
-    \item hardening surfaces,
     \item shaping or straightening of parts  (laser peen forming).
 
 \end{itemize}
-LSP is expected to expand from current high-value, low volume parts to more \mbox{mass-produced} parts in the future, due to the steady advancements in laser systems suitable for \mbox{LSP~\cite{clauer_2019}}. 
+LSP is expected to expand from current high-value, low volume parts to more mass-produced parts in the future, due to the steady advancements in laser systems suitable for \mbox{LSP~\cite{clauer_2019}}. 
 
 
 
@@ -262,12 +265,9 @@ The LSP station uses two laser sources:
 \end{itemize}
 A~laser beam distribution system (LBDS) distributes the beam from the laser laboratory located on the ground floor to the experimental laboratory located on the 1\textsuperscript{st} floor. The Bivoj laser system is a~Diode Pumped Solid State Laser (DPSSL) based on Yb-doped gain media with a~laser wavelength of 1030 nm capable of delivering energy pulses up to \SI{8}{\joule} at a~\SI{10}{\hertz} repetition rate. The beam shape at the output of the Bivoj laser is a~square flat-top pulse. An overview of the Bivoj laser system is shown in Figure~\ref{fig:bivoj}. The two main sections of the Bivoj laser are the front-end and the \SI{10}{\joule} amplifier. The second laser source available at the LSP station is the Litron~LPY~ST~7875-10~2HG laser.
  
- \begin{figure}[h]
-    \centering
-    \includegraphics[width=1.0\linewidth]{img/bivoj.jpg}
-    \caption[Laser system Bivoj: Diode-pumped solid-state (DPSSL) laser]{Laser system Bivoj: Diode-pumped solid-state (DPSSL) laser \protect\cite{bivojiso}}
-    \label{fig:bivoj}
-\end{figure}
+%% \noindent\shadowimage[width=6cm]{image}\par\bigskip 
+ 
+
  
  \subsection{LSP station layout}
  \label{sec:lsp_layout}
@@ -302,7 +302,27 @@ The layout of the LSP station is shown in Figure~\ref{fig:lsplayout}. The laser 
 
 \end{comment}
 
+\begin{figure}[H]
+\begin{center}
+  \subfigure[Schematic layout of LSP station]
+    {\includegraphics[width=4.5cm]{img/lsp_layout.jpg}
+    \label{fig:Data_u}}
+  \hspace{1cm}
+  \subfigure[Photography of LSP station]
+    {\noindent\shadowimage[width=4.5cm]{img/lsp_station_real.JPG}
+    \label{fig:Data_h}}
+  \caption[Schematic layout of LSP station and photography of LSP station]
+    {(Description of images from left to right) (a) schematic layout of LSP station, (b) photography of LSP station~\cite{bohm_kaufman_brajer_rostohar_2019}}
+  \label{fig:lsplayout}
+\end{center}
+\end{figure}
 
+ \begin{figure}[h]
+    \centering
+    \noindent\shadowimage[width=0.7\linewidth]{img/bivoj.jpg}
+    \caption[Laser system Bivoj: Diode-pumped solid-state (DPSSL) laser]{Laser system Bivoj: Diode-pumped solid-state (DPSSL) laser \protect\cite{bivojiso}}
+    \label{fig:bivoj}
+\end{figure}
 
 \subsection{Bivoj laser system}
 
@@ -317,20 +337,7 @@ and increases the pulse energy to approximately \SI{100}{\milli\joule}.
 The repetition rate can be switched between \SI{1}{\hertz} and \SI{10}{\hertz}. The 
 beam shape at the front-end output is \numproduct{8 x 8} \SI{}{\mm\squared} square flat-top.
 
-\begin{figure}[H]
-\begin{center}
-  \subfigure[Schematic layout of LSP station]
-    {\includegraphics[width=7cm]{img/lsp_layout.jpg}
-    \label{fig:Data_u}}
-  \hspace{1cm}
-  \subfigure[Photography of LSP station]
-    {\includegraphics[width=7cm]{img/lsp_station_real.JPG}
-    \label{fig:Data_h}}
-  \caption[Schematic layout of LSP station and photography of LSP station]
-    {(Description of images from left to right) (1) schematic layout of LSP station, (2) photography of LSP station~\cite{bohm_kaufman_brajer_rostohar_2019}}
-  \label{fig:lsplayout}
-\end{center}
-\end{figure}
+
 
 \subsubsection*{Bivoj 10 J amplifier}
 
@@ -345,14 +352,14 @@ approximately \SI{8}{\joule} at \SI{10}{\hertz}. The spatial profile of the lase
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{img/spatial_profile.jpg}
+    \includegraphics[width=0.3\linewidth]{img/spatial_profile.jpg}
     \caption[Spatial profile of laser beam at output of Bivoj \SI{10}{\joule} amplifier]{Spatial profile of laser beam at output of Bivoj \SI{10}{\joule} amplifier and approximate dimensions \protect\cite{kaufman}}
     \label{fig:spatialprofile}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{img/temporal_profile_bivoj_v_2.png}
+    \includegraphics[width=0.52\linewidth]{img/temporal_profile_bivoj_v_2.png}
     \caption[Temporal profile of laser beam at output of Bivoj \SI{10}{\joule}]{Temporal profile of laser beam at output of Bivoj \SI{10}{\joule} amplifier measured with InGaAs photodetector \protect\cite{kaufman}}
     \label{fig:temporalprofile}
 \end{figure}
@@ -364,6 +371,7 @@ The second laser source available at the LSP station is the Litron~LPY~ST~7875-1
 
 \begin{table}[h!] 
 \centering
+        \caption[Litron~LPY~ST~7875-10~2HG parameters]{Litron~LPY~ST~7875-10~2HG parameters \protect\cite{litronmanual}}
     \begin{threeparttable}
         \begin{tabular}{|c | c|} 
         \hline
@@ -395,13 +403,13 @@ The second laser source available at the LSP station is the Litron~LPY~ST~7875-1
         \end{tablenotes}
         
     \end{threeparttable}
-        \caption[Litron~LPY~ST~7875-10~2HG parameters]{Litron~LPY~ST~7875-10~2HG parameters \protect\cite{litronmanual}}
+
 \label{tab:litronparameters}
 \end{table}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\linewidth]{img/litron.JPG}
+    \noindent\shadowimage[width=0.4\linewidth]{img/litron.JPG}
     \caption{Litron~LPY~ST~7875-10~2HG laser at HiLASE centre}
     \label{fig:litron}
 \end{figure}
@@ -438,14 +446,14 @@ A block diagram of the electrical connection between FANUC~R-30iB controller and
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\linewidth]{img/electronics_3.jpg}
+    \includegraphics[width=0.95\linewidth]{img/electronics_3.jpg}
     \caption[Block diagram of the electrical connection]{Block diagram of the electrical connection between FANUC~R-30iB controller and Litron~LPY~ST~7875-10~2HG laser}
     \label{fig:electronics}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\linewidth]{img/wavedrom_bigger.png}
+    \includegraphics[width=0.95\linewidth]{img/wavedrom_bigger.png}
     \caption[Timing diagram for triggering of flashlamp and the Q-switch]{Timing diagram for external triggering of flashlamp and internal triggering of the Q-switch, where $t_{BT}$ is the intra-cavity build up time (typically \SIrange{50}{100}{\ns}) and $t_{QSW}$ is the internally timed Q-switch delay (typically \SIrange{100}{500}{\us} for maximum output)}
     \label{fig:wave}
 \end{figure}
@@ -463,7 +471,9 @@ The following experimental parameters describe the improvement of cavitation ero
 
 \begin{table}[H]
 \centering
+    
     \begin{threeparttable}
+            \caption[Experimental parameters of laser shock peening]{Experimental parameters of laser shock peening for improvement of cavitation erosion resistance}
         \begin{tabular}{|c | c|} 
         \hline
             \textbf{Parameter} & \textbf{Value} \\ [0.5ex] 
@@ -485,7 +495,7 @@ The following experimental parameters describe the improvement of cavitation ero
         \hline
         \end{tabular}
 
-        \caption[Experimental parameters of laser shock peening]{Experimental parameters of laser shock peening for improvement of cavitation erosion resistance}
+
         \label{experimentalparameters}
     \end{threeparttable}
 \end{table}
@@ -493,11 +503,11 @@ The following experimental parameters describe the improvement of cavitation ero
 \begin{figure}[H]
 \begin{center}
   \subfigure[FANUC~M-20iA/20M industrial robotic arm]
-    {\includegraphics[width=7cm]{img/fanuc_robot.png}
+    {\includegraphics[width=7.2cm]{img/fanuc_robot.png}
     \label{fig:Data_u}}
   \hspace{1cm}
   \subfigure[FANUC~R-30iB controller with teach pendant]
-    {\includegraphics[width=7cm]{img/fanuc_controller.png}
+    {\includegraphics[width=7.2cm]{img/fanuc_controller.png}
     \label{fig:Data_h}}
   \caption[FANUC~M-20iA/20M industrial robotic arm and FANUC R-30iB controller]
     {(Description of images from left to right) (a) FANUC~M-20iA/20M industrial robotic arm, (b) FANUC~R-30iB controller with teach pendant~\cite{fanucrobotcontroller}}
